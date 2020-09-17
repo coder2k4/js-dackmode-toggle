@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Переключатель светой схемы</title>
+</head>
+<body>
+
+
+<div class="container">
+
+    <input type="checkbox" id="toggle">
+    <label for="toggle"></label>
+
+    <h2>Python or JS</h2>
+    <p>
+        Is the language easy to learn?
+        This question is especially important if you’re learning a programming language for the first time and don’t
+        have any coding experience. You need to go with a language that is relatively user-friendly and has a shorter
+        learning curve. On this count, Python scores far better than JavaScript. It is designed to be as
+        beginner-friendly as possible and uses simple variables and functions. JavaScript is full of complexities like
+        class definitions. When it comes to ease of learning, Python is the clear winner.
+    </p>
+
+</div>
+
+
+<script src="main.js"></script>
+
+<style>
+
+    body {
+        display: flex;
+        width: 100vw;
+        height: 100vh;
+        background: bisque; /* fallback for old browsers */
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+    }
+
+    body.dark {
+        color: #e9e9e9;
+        background: darkslategray;
+    }
+
+    .container{
+        max-width: 600px;
+    }
+
+    #toggle {
+        /*visibility: hidden;*/
+        display: none;
+    }
+
+    label {
+        cursor: pointer;
+        user-select: none;
+        width: 35px;
+        height: 35px;
+        display: inline-block;
+        background: darkslategray;
+        box-shadow: green 0 0 2px 2px;
+    }
+
+    #toggle:checked ~ label{
+        box-shadow: orange 0 0 2px 2px;
+        background: bisque;
+    }
+
+
+</style>
+
+</body>
+
+</html>
